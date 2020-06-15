@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="768.0" prefWidth="1024.0" stylesheets="@ventanaprincipal.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appventa.VentanaPrincipalController">
+   <top>
+      <HBox prefHeight="150.0" styleClass="background-cabecera" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0">
+               <children>
+                  <ImageView fx:id="imglogo" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox alignment="CENTER_LEFT" prefHeight="250.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="La Esquina de Buen Gusto" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SNACK" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="0" left="5" right="5" top="5" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="txt_Editar" prefHeight="30.0" prefWidth="240.0" promptText="Escribir texto">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btn_nuevo" lineSpacing="5.0" mnemonicParsing="false" onAction="#OnClicRegistrar" prefHeight="30.0" prefWidth="150.0" styleClass="btnprincipal" text="Nuevo Pedido" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="imgnuevo" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_modificar" layoutX="335.0" layoutY="45.0" lineSpacing="5.0" mnemonicParsing="false" onAction="#OnClickModificar" prefHeight="34.0" prefWidth="156.0" styleClass="btnprincipal" text="Modificar Pedido" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="imgmodificar" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" spacing="50.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="imgrecarga" fitHeight="48.0" fitWidth="48.0" onMouseClicked="#OnClickRecarga" pickOnBounds="true" preserveRatio="true" styleClass="imgrecarga">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fx:id="txtsesion" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txtsesion" text="PC1" textAlignment="RIGHT" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" styleClass="background-primario">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-principal" text="Lista de Pedidos" textAlignment="CENTER" wrappingWidth="242.09900665283203" />
+               </children>
+            </HBox>
+            <ListView fx:id="listview" prefWidth="400.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" styleClass="background-primario">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-principal" text="Catalogo de Productos" textAlignment="CENTER" wrappingWidth="376.09900665283203" />
+               </children>
+            </HBox>
+            <TableView fx:id="tableview" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="idproducto" maxWidth="100.0" prefWidth="50.0" text="id" />
+                <TableColumn fx:id="nombreproducto" minWidth="300.0" prefWidth="350.0" text="Nombre" />
+                  <TableColumn fx:id="precioproducto" maxWidth="150.0" minWidth="70.0" prefWidth="100.0" text="Precio" />
+                  <TableColumn fx:id="cantidadproducto" maxWidth="200.0" minWidth="75.0" prefWidth="150.0" text="cantidad" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" maxHeight="100.0" prefHeight="100.0" styleClass="foottotal" VBox.vgrow="ALWAYS">
+               <children>
+                  <Text fx:id="txttotal" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txttotal" text="S/. 0.00" textAlignment="CENTER" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="20.0" styleClass="background-pie" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-pie" text="\@loizp 2020">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

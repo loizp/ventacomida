@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AppVenta.jnlp">
+  <information>
+    <title>AppVenta</title>
+    <vendor>App Ventas</vendor>
+    <description>Ventas</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="AppVenta.jar" size="35436" download="eager" />
+    <jar href="libs\mysql-connector-java-5.1.49.jar" size="1006904" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="appventa.AppVenta"  name="Ventas" />
+  <update check="background"/>
+</jnlp>

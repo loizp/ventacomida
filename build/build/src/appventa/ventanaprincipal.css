@@ -1,0 +1,65 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.background-cabecera {
+    -fx-background-color: linear-gradient(from 50% 80% to 50% 0%, #ffd600, #64dd17);
+}
+
+.background-pie {
+    -fx-background-color: linear-gradient(to bottom, #ffd600, #64dd17);
+}
+
+.background-primario {
+    -fx-background-color: #ffd600;
+}
+
+.title-principal {
+    -fx-font-size: 20pt;
+    -fx-font-weight: bold;
+}
+
+.title-pie {
+    -fx-font-size: 8pt;
+    -fx-font-style: italic;
+    -fx-fill: grey;
+}
+
+.productoCell:hover {
+    -fx-border-width: 1px 1px 1px 1px;
+}
+
+.productoCell {
+    -fx-background-color: #ffff52;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-border-color: grey;
+    -fx-padding: 10px;
+    -fx-margin: 10px;
+}
+.txttotal {
+    -fx-font-weight: bold;
+    -fx-fill: #33691E;
+    -fx-font-size: 55pt;
+}
+
+.foottotal {
+    -fx-background-color: #ffd600;
+}
+
+.txtsesion {
+    -fx-font-weight: bold;
+    -fx-font-size: 13pt;
+    -fx-fill: #E65100;
+}
+.btnprincipal {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5, 0, 0, 0);
+}
+
+.imgrecarga {
+    -fx-fill: White;
+    -fx-cursor: hand;
+}
+
+.imgrecarga:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 2, 0, 0, 0);
+}
